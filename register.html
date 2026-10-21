@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка (копия с login.html) -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo logo">
+                <img src="img/logo.png" alt="Логотип BestGames" class="logo__img">
+                <span class="logo__text">BestGames</span>
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог игр</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент (Форма регистрации) -->
+    <main class="main auth-page">
+        <div class="auth-container">
+            <h1 class="auth-title">Регистрация</h1>
+            
+            <form class="auth-form" action="#" method="POST">
+                
+                <div class="auth-form__group">
+                    <label for="reg-email" class="auth-form__label">Email</label>
+                    <input type="email" id="reg-email" class="auth-form__input" placeholder="example@mail.ru" required>
+                </div>
+
+                <div class="auth-form__group">
+                    <label for="reg-lastname" class="auth-form__label">Фамилия</label>
+                    <input type="text" id="reg-lastname" class="auth-form__input" placeholder="Иванов" required>
+                </div>
+
+                <div class="auth-form__group">
+                    <label for="reg-name" class="auth-form__label">Имя</label>
+                    <input type="text" id="reg-name" class="auth-form__input" placeholder="Иван" required>
+                </div>
+
+                <div class="auth-form__group">
+                    <label for="reg-birthdate" class="auth-form__label">Дата рождения</label>
+                    <!-- type="date" вызовет встроенный календарь -->
+                    <input type="date" id="reg-birthdate" class="auth-form__input" required>
+                </div>
+
+                <div class="auth-form__group">
+                    <label for="reg-phone" class="auth-form__label">Телефон</label>
+                    <!-- type="tel" подскажет браузеру, что это телефон, но строгой проверки не будет -->
+                    <input type="tel" id="reg-phone" class="auth-form__input" placeholder="+7 (999) 123-45-67" required>
+                </div>
+
+                <div class="auth-form__group">
+                    <label for="reg-password" class="auth-form__label">Пароль</label>
+                    <input type="password" id="reg-password" class="auth-form__input" placeholder="Придумайте пароль" required>
+                </div>
+
+                <div class="auth-form__group">
+                    <label for="reg-password-confirm" class="auth-form__label">Повтор пароля</label>
+                    <input type="password" id="reg-password-confirm" class="auth-form__input" placeholder="Повторите пароль" required>
+                </div>
+
+                <!-- Галочка согласия -->
+                <div class="auth-form__group auth-form__checkbox-group">
+                    <label class="auth-form__checkbox-label">
+                        <input type="checkbox" class="auth-form__checkbox" required>
+                        <span class="auth-form__checkbox-text">Я согласен на обработку персональных данных</span>
+                    </label>
+                </div>
+
+                <!-- Кнопка -->
+                <button type="submit" class="auth-form__btn">Зарегистрироваться</button>
+
+                <!-- Ссылки под формой -->
+                <div class="auth-form__links">
+                    <span class="auth-form__link-text">Уже есть аккаунт?</span>
+                    <a href="login.html" class="auth-form__link">Войти</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
