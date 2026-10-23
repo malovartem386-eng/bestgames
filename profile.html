@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo logo">
+                <img src="img/logo.png" alt="Логотип BestGames" class="logo__img">
+                <span class="logo__text">BestGames</span>
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог игр</a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="login.html" class="header__btn-login">Выйти</a>
+                <button class="theme-toggle" type="button" aria-label="Переключить тему">
+                    Сменить тему
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main profile-page">
+        <div class="profile-layout">
+            
+            <!-- Боковое меню -->
+            <aside class="profile-sidebar">
+                <div class="profile-sidebar__user">
+                    <div class="profile-sidebar__avatar">А</div>
+                    <h2 class="profile-sidebar__name">Артем М.</h2>
+                    <p class="profile-sidebar__email">mail@example.com</p>
+                </div>
+                <nav class="profile-sidebar__nav">
+                    <!-- Кнопки переключения табов -->
+                    <button class="profile-sidebar__link active" data-tab="info">Информация</button>
+                    <button class="profile-sidebar__link" data-tab="history">История покупок</button>
+                    <button class="profile-sidebar__link" data-tab="settings">Настройки</button>
+                </nav>
+            </aside>
+
+            <!-- Контентная часть -->
+            <div class="profile-content">
+                
+                <!-- Таб 1: Информация о пользователе -->
+                <div class="profile-tab active" id="tab-info">
+                    <h1 class="profile-content__title">Информация о пользователе</h1>
+                    <div class="profile-info">
+                        <div class="profile-info__row">
+                            <span class="profile-info__label">Фамилия:</span>
+                            <span class="profile-info__value">Малов</span>
+                        </div>
+                        <div class="profile-info__row">
+                            <span class="profile-info__label">Имя:</span>
+                            <span class="profile-info__value">Артем</span>
+                        </div>
+                        <div class="profile-info__row">
+                            <span class="profile-info__label">Дата рождения:</span>
+                            <span class="profile-info__value">01.01.2000</span>
+                        </div>
+                        <div class="profile-info__row">
+                            <span class="profile-info__label">Телефон:</span>
+                            <span class="profile-info__value">+7 (999) 123-45-67</span>
+                        </div>
+                        <div class="profile-info__row">
+                            <span class="profile-info__label">Email:</span>
+                            <span class="profile-info__value">mail@example.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Таб 2: История покупок -->
+                <div class="profile-tab" id="tab-history">
+                    <h1 class="profile-content__title">История покупок</h1>
+                    <div class="profile-history-table">
+                        <div class="profile-history-table__header">
+                            <span>Дата</span>
+                            <span>Название игры</span>
+                            <span>Стоимость</span>
+                        </div>
+                        <div class="profile-history-table__row">
+                            <span>12.10.2024</span>
+                            <span>Minecraft</span>
+                            <span class="price">1 999 ₽</span>
+                        </div>
+                        <div class="profile-history-table__row">
+                            <span>15.10.2024</span>
+                            <span>Cyberpunk 2077</span>
+                            <span class="price">2 499 ₽</span>
+                        </div>
+                        <div class="profile-history-table__row">
+                            <span>20.10.2024</span>
+                            <span>The Witcher 3</span>
+                            <span class="price">1 199 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Таб 3: Настройки -->
+                <div class="profile-tab" id="tab-settings">
+                    <h1 class="profile-content__title">Настройки профиля</h1>
+                    
+                    <div class="profile-settings">
+                        <div class="profile-settings__item">
+                            <div class="profile-settings__info">
+                                <h3>Пароль</h3>
+                                <p>Сменить пароль от аккаунта</p>
+                            </div>
+                            <button class="profile-settings__btn">Сменить пароль</button>
+                        </div>
+
+                        <div class="profile-settings__item">
+                            <div class="profile-settings__info">
+                                <h3>Тема оформления</h3>
+                                <p>Переключить светлую или темную тему</p>
+                            </div>
+                            <!-- Здесь используем тот же класс, что и в шапке, чтобы JS его подхватил -->
+                            <button class="theme-toggle profile-settings__btn">Сменить тему</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

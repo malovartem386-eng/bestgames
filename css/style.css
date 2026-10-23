@@ -625,6 +625,372 @@ ul {
 }
 
 
+
+
+/* =========================================
+   СТРАНИЦА АВТОРИЗАЦИИ (ВХОД И РЕГИСТРАЦИЯ)
+   ========================================= */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Высота экрана минус шапка */
+    padding: 40px 20px;
+}
+
+.auth-container {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 400px; /* Форма не будет шире 400px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: var(--text-main);
+}
+
+.auth-form__group {
+    margin-bottom: 20px;
+}
+
+.auth-form__label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.auth-form__input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--bg-main); /* Темный фон поля */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+.auth-form__input:focus {
+    outline: none;
+    border-color: var(--accent-color); /* Фиолетовая рамка при клике */
+    box-shadow: 0 0 10px rgba(123, 44, 191, 0.2);
+}
+
+.auth-form__btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    margin-top: 10px;
+}
+
+.auth-form__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(123, 44, 191, 0.4);
+}
+
+.auth-form__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.auth-form__link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.auth-form__link:hover {
+    color: var(--accent-color);
+}
+
+/* Стили для галочки (согласие на обработку данных) */
+.auth-form__checkbox-group {
+    margin-bottom: 25px;
+}
+
+.auth-form__checkbox-label {
+    display: flex;
+    align-items: flex-start; /* Выравниваем по верхнему краю, если текст в две строки */
+    gap: 10px;
+    cursor: pointer;
+}
+
+.auth-form__checkbox {
+    margin-top: 3px; /* Чуть опускаем галочку для ровности */
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-color); /* Делает галочку фиолетовой в современных браузерах */
+    cursor: pointer;
+}
+
+.auth-form__checkbox-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.auth-form__link-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   ЛИЧНЫЙ КАБИНЕТ (PROFILE)
+   ========================================= */
+.profile-page {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое */
+    width: 100%;
+    padding: 30px 20px; /* Добавим отступы по бокам, чтобы на мобилке не прилипало */
+    box-sizing: border-box; /* Чтобы паддинги не увеличивали ширину */
+}
+
+.profile-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1200px;      /* Ограничиваем максимальную ширину */
+    margin: 0 auto;         /* Ставим по центру экрана */
+    width: 100%;            /* Занимаем всю доступную ширину до 1200px */
+}
+
+/* Боковое меню */
+.profile-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.profile-sidebar__avatar {
+    width: 80px;
+    height: 80px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+}
+
+.profile-sidebar__name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.profile-sidebar__email {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.profile-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-sidebar__link {
+    display: block;
+    padding: 12px 15px;
+    color: var(--text-main);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+    text-align: left;
+}
+
+.profile-sidebar__link:hover,
+.profile-sidebar__link.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Контентная часть */
+.profile-content {
+    flex-grow: 1;
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    padding: 30px;
+}
+
+.profile-content__title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* Информация о пользователе */
+.profile-info__row {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.profile-info__label {
+    width: 150px;
+    color: var(--text-muted);
+}
+
+.profile-info__value {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* История покупок */
+.profile-history__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-history__img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.profile-history__info {
+    flex-grow: 1;
+}
+
+.profile-history__name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.profile-history__date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.profile-history__price {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Табы */
+.profile-tab {
+    display: none; /* Скрываем все табы по умолчанию */
+}
+
+.profile-tab.active {
+    display: block; /* Показываем только активный */
+}
+
+/* Кнопки в боковом меню (мы поменяли ссылки <a> на кнопки <button>) */
+.profile-sidebar__link {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1rem;
+    text-align: left;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    font-family: inherit;
+}
+
+.profile-sidebar__link:hover,
+.profile-sidebar__link.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Таблица истории покупок */
+.profile-history-table {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.profile-history-table__header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Дата - Название - Цена */
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-weight: bold;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-history-table__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-history-table__row:last-child {
+    border-bottom: none;
+}
+
+.price {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Настройки профиля */
+.profile-settings__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-settings__info h3 {
+    margin-bottom: 5px;
+}
+
+.profile-settings__info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.profile-settings__btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+.profile-settings__btn:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
 /* =========================================
    АДАПТИВНОСТЬ (МОБИЛЬНАЯ ВЕРСТКА)
    ========================================= */
@@ -768,127 +1134,26 @@ ul {
         flex-direction: column;
         align-items: center;
     }
-}
+    
+    .profile-page {
+        display: block; /* Отключаем flex на мобилке, чтобы не мешал */
+        padding: 15px;
+    }    
 
-/* =========================================
-   СТРАНИЦА АВТОРИЗАЦИИ (ВХОД И РЕГИСТРАЦИЯ)
-   ========================================= */
-.auth-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 150px); /* Высота экрана минус шапка */
-    padding: 40px 20px;
-}
-
-.auth-container {
-    background-color: var(--bg-secondary);
-    padding: 40px;
-    border-radius: var(--border-radius);
-    width: 100%;
-    max-width: 400px; /* Форма не будет шире 400px */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.auth-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    color: var(--text-main);
-}
-
-.auth-form__group {
-    margin-bottom: 20px;
-}
-
-.auth-form__label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-.auth-form__input {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: var(--bg-main); /* Темный фон поля */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius);
-    color: var(--text-main);
-    font-size: 1rem;
-    transition: border-color var(--transition-speed);
-}
-
-.auth-form__input:focus {
-    outline: none;
-    border-color: var(--accent-color); /* Фиолетовая рамка при клике */
-    box-shadow: 0 0 10px rgba(123, 44, 191, 0.2);
-}
-
-.auth-form__btn {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
-    color: #fff;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-speed) ease;
-    margin-top: 10px;
-}
-
-.auth-form__btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(123, 44, 191, 0.4);
-}
-
-.auth-form__links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-.auth-form__link {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color var(--transition-speed);
-}
-
-.auth-form__link:hover {
-    color: var(--accent-color);
-}
-
-/* Стили для галочки (согласие на обработку данных) */
-.auth-form__checkbox-group {
-    margin-bottom: 25px;
-}
-
-.auth-form__checkbox-label {
-    display: flex;
-    align-items: flex-start; /* Выравниваем по верхнему краю, если текст в две строки */
-    gap: 10px;
-    cursor: pointer;
-}
-
-.auth-form__checkbox {
-    margin-top: 3px; /* Чуть опускаем галочку для ровности */
-    width: 18px;
-    height: 18px;
-    accent-color: var(--accent-color); /* Делает галочку фиолетовой в современных браузерах */
-    cursor: pointer;
-}
-
-.auth-form__checkbox-text {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.4;
-}
-
-.auth-form__link-text {
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    /* Личный кабинет на мобилке */
+    .profile-layout {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0% auto;
+    }
+    .profile-sidebar {
+        width: 100%;
+    }
+    .profile-info__row {
+        flex-direction: column;
+    }
+    .profile-info__label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }

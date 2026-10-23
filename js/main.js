@@ -1,20 +1,23 @@
 // =========================================
 // 1. ПЕРЕКЛЮЧЕНИЕ ТЕМЫ
 // =========================================
-const themeToggleBtn = document.querySelector('.theme-toggle');
+const themeToggleBtns = document.querySelectorAll('.theme-toggle'); // Находим ВСЕ кнопки с этим классом
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme === 'light') {
     document.body.classList.add('theme-light');
 }
 
-themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('theme-light');
-    if (document.body.classList.contains('theme-light')) {
-        localStorage.setItem('theme', 'light');
-    } else {
-        localStorage.setItem('theme', 'dark');
-    }
+// Перебираем все найденные кнопки и вешаем на каждую событие
+themeToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('theme-light');
+        if (document.body.classList.contains('theme-light')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 });
 
 
@@ -109,5 +112,28 @@ if (genreInput && genreSuggestions) {
         if (!genreInput.contains(e.target) && !genreSuggestions.contains(e.target)) {
             genreSuggestions.classList.remove('active');
         }
+    });
+}
+
+// =========================================
+// 5. ПЕРЕКЛЮЧЕНИЕ ТАБОВ В ЛИЧНОМ КАБИНЕТЕ
+// =========================================
+const tabButtons = document.querySelectorAll('.profile-sidebar__link');
+const tabs = document.querySelectorAll('.profile-tab');
+
+if (tabButtons.length > 0 && tabs.length > 0) {
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 1. Убираем активный класс у всех кнопок и табов
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // 2. Добавляем активный класс нажатой кнопке
+            button.classList.add('active');
+
+            // 3. Находим ID таба и показываем его
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById('tab-' + tabId).classList.add('active');
+        });
     });
 }
