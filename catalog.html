@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог игр — BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo logo">
+                <img src="img/logo.png" alt="Логотип BestGames" class="logo__img">
+                <span class="logo__text">BestGames</span>
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог игр</a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="login.html" class="header__btn-login">Выйти</a>
+                <button class="theme-toggle" type="button" aria-label="Переключить тему">
+                    Сменить тему
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main catalog-page">
+        <h1 class="catalog-page__title">Каталог игр</h1>
+        
+        <!-- Мобильная кнопка фильтров -->
+        <button class="catalog-page__filter-btn" id="openFilterBtn">Фильтры</button>
+
+        <div class="catalog-page__layout">
+            <!-- Боковая панель -->
+            <aside class="catalog-page__sidebar" id="filterSidebar">
+                <div class="catalog-page__sidebar-header">
+                    <h2>Жанры</h2>
+                    <button class="catalog-page__close-filter" id="closeFilterBtn">&times;</button>
+                </div>
+                <ul class="catalog-page__filter-list">
+                    <li><a href="#" class="catalog-page__filter-link active">Все игры</a></li>
+                    <li><a href="#" class="catalog-page__filter-link">Экшен</a></li>
+                    <li><a href="#" class="catalog-page__filter-link">RPG</a></li>
+                    <li><a href="#" class="catalog-page__filter-link">Стратегии</a></li>
+                    <li><a href="#" class="catalog-page__filter-link">Инди</a></li>
+                    <li><a href="#" class="catalog-page__filter-link">Хорроры</a></li>
+                </ul>
+            </aside>
+
+            <!-- Сетка с карточками -->
+            <div class="catalog-page__content">
+                <div class="catalog__grid">
+                    
+                    <!-- Карточка 1 -->
+                    <article class="game-card">
+                        <div class="game-card__img-wrapper">
+                            <img src="img/1.webp" alt="Minecraft" class="game-card__img">
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Minecraft</h3>
+                            <p class="game-card__dev">Разработчик: Mojang</p>
+                            <p class="game-card__genre">Жанр: Песочница</p>
+                            <div class="game-card__rating">★★★★★</div> <!-- Рейтинг звездочками -->
+                            <div class="game-card__bottom">
+                                <span class="game-card__price">1 999 ₽</span>
+                                <a href="#" class="game-card__btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="game-card">
+                        <div class="game-card__img-wrapper">
+                            <img src="img/game2.webp" alt="Cyberpunk 2077" class="game-card__img">
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Cyberpunk 2077</h3>
+                            <p class="game-card__dev">Разработчик: CD Projekt Red</p>
+                            <p class="game-card__genre">Жанр: RPG</p>
+                            <div class="game-card__rating">★★★★☆</div>
+                            <div class="game-card__bottom">
+                                <span class="game-card__price">2 499 ₽</span>
+                                <a href="#" class="game-card__btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="game-card">
+                        <div class="game-card__img-wrapper">
+                            <img src="img/game3.webp" alt="The Witcher 3" class="game-card__img">
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">The Witcher 3</h3>
+                            <p class="game-card__dev">Разработчик: CD Projekt Red</p>
+                            <p class="game-card__genre">Жанр: Экшен</p>
+                            <div class="game-card__rating">★★★★★</div>
+                            <div class="game-card__bottom">
+                                <span class="game-card__price">1 199 ₽</span>
+                                <a href="#" class="game-card__btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 4 -->
+                    <article class="game-card">
+                        <div class="game-card__img-wrapper">
+                            <img src="img/game4.webp" alt="GTA V" class="game-card__img">
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">GTA V</h3>
+                            <p class="game-card__dev">Разработчик: Rockstar</p>
+                            <p class="game-card__genre">Жанр: Экшен</p>
+                            <div class="game-card__rating">★★★★☆</div>
+                            <div class="game-card__bottom">
+                                <span class="game-card__price">1 499 ₽</span>
+                                <a href="#" class="game-card__btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 5 -->
+                    <article class="game-card">
+                        <div class="game-card__img-wrapper">
+                            <img src="img/game5.webp" alt="Elden Ring" class="game-card__img">
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Elden Ring</h3>
+                            <p class="game-card__dev">Разработчик: FromSoftware</p>
+                            <p class="game-card__genre">Жанр: RPG</p>
+                            <div class="game-card__rating">★★★★★</div>
+                            <div class="game-card__bottom">
+                                <span class="game-card__price">3 999 ₽</span>
+                                <a href="#" class="game-card__btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 6 -->
+                    <article class="game-card">
+                        <div class="game-card__img-wrapper">
+                            <img src="img/game6.webp" alt="Игра" class="game-card__img"> 
+                        </div>
+                        <div class="game-card__content">
+                            <h3 class="game-card__title">Among Us</h3>
+                            <p class="game-card__dev">Разработчик: Innersloth</p>
+                            <p class="game-card__genre">Жанр: Инди</p>
+                            <div class="game-card__rating">★★★☆☆</div>
+                            <div class="game-card__bottom">
+                                <span class="game-card__price">299 ₽</span>
+                                <a href="#" class="game-card__btn">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

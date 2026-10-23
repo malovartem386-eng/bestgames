@@ -137,3 +137,47 @@ if (tabButtons.length > 0 && tabs.length > 0) {
         });
     });
 }
+
+// =========================================
+// 6. ИМИТАЦИЯ АВТОРИЗАЦИИ (ПЕРЕХОДЫ)
+// =========================================
+
+// Обработка формы входа
+const loginForm = document.getElementById('loginForm');
+if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Отменяем перезагрузку страницы
+        // В реальности тут была бы проверка логина/пароля через API
+        window.location.href = 'profile.html'; // Перекидываем в ЛК
+    });
+}
+
+// Обработка формы регистрации
+const registerForm = document.getElementById('registerForm');
+if (registerForm) {
+    registerForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Отменяем перезагрузку
+        // В реальности тут была бы отправка данных на сервер
+        // После регистрации отправляем на страницу входа
+        
+        window.location.href = 'login.html';
+    });
+}
+
+
+// =========================================
+// 7. МОБИЛЬНЫЙ ФИЛЬТР В КАТАЛОГЕ
+// =========================================
+const openFilterBtn = document.getElementById('openFilterBtn');
+const closeFilterBtn = document.getElementById('closeFilterBtn');
+const filterSidebar = document.getElementById('filterSidebar');
+
+if (openFilterBtn && closeFilterBtn && filterSidebar) {
+    openFilterBtn.addEventListener('click', () => {
+        filterSidebar.classList.add('active');
+    });
+
+    closeFilterBtn.addEventListener('click', () => {
+        filterSidebar.classList.remove('active');
+    });
+}

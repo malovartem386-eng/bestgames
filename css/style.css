@@ -172,7 +172,7 @@ ul {
 /* Сетка каталога (Grid) */
 .catalog__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 20px;
 }
 
@@ -185,27 +185,27 @@ ul {
 
 }
 
-/* Обертка для картинки (держит размер) */
+/* Обертка для картинки */
 .game-card__img-wrapper {
     width: 100%;
-    height: 200px; /* Задаем жесткую высоту для картинки */
-    overflow: hidden; /* Прячем то, что вылезает за края */
+    height: 180px; /* Уменьшили высоту, чтобы карточка стала компактнее */
+    overflow: hidden;
+    /* Убрали background-color и flex, они больше не нужны */
 }
 
-/* Сама картинка (вписывается в обертку) */
+/* Сама картинка */
 .game-card__img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Это магия! Картинка заполнит блок, обрежется, но пропорции не сломаются */
-    object-position: center; /* Центрируем картинку внутри блока */
+    object-fit: cover; /* Вернули cover, чтобы заполнить блок без пустых полос */
+    object-position: center; /* Центрируем картинку */
     transition: transform var(--transition-speed) ease;
 }
 
-/* Эффект зума при наведении на карточку */
+/* Эффект зума при наведении (картинка будет увеличиваться и показывать скрытые края) */
 .game-card:hover .game-card__img {
-    transform: scale(1.05);
+    transform: scale(1.15); /* Увеличиваем на 15% при наведении */
 }
-
 
 .game-card:hover {
     transform: translateY(-5px);
@@ -991,6 +991,183 @@ ul {
     color: #fff;
 }
 
+
+/* Новые элементы карточки (Разработчик, Рейтинг) */
+.game-card__dev {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.game-card__genre {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.game-card__rating {
+    color: #ffb703; /* Золотой цвет для звезд */
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Кнопка "Подробнее" (делаем её как ссылку, но стилизуем как кнопку) */
+.game-card__btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.game-card__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(123, 44, 191, 0.4);
+}
+
+/* =========================================
+   СТРАНИЦА КАТАЛОГА (ПОЛНЫЙ БЛОК)
+   ========================================= */
+.catalog-page__title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Кнопка "Фильтры" (по умолчанию скрыта на десктопе) */
+.catalog-page__filter-btn {
+    display: none;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Сетка: слева фильтры, справа контент */
+.catalog-page__layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Боковая панель фильтров */
+.catalog-page__sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Заголовок и крестик в сайдбаре */
+.catalog-page__sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.catalog-page__sidebar-header h2 {
+    font-size: 1.2rem;
+}
+
+/* Кнопка закрытия (крестик) — нужна только на мобилке */
+.catalog-page__close-filter {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Список жанров */
+.catalog-page__filter-list {
+    list-style: none;
+    padding: 0;
+}
+
+.catalog-page__filter-list li {
+    margin-bottom: 10px;
+}
+
+.catalog-page__filter-link {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+}
+
+.catalog-page__filter-link:hover,
+.catalog-page__filter-link.active {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Контентная часть (сетка карточек) */
+.catalog-page__content {
+    flex-grow: 1;
+}
+
+/* Новые элементы карточки (Разработчик, Рейтинг) */
+.game-card__dev {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.game-card__genre {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.game-card__rating {
+    color: #ffb703; /* Золотой цвет для звезд */
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Кнопка "Подробнее" */
+.game-card__btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.game-card__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(123, 44, 191, 0.4);
+}
+
+
+
+
+
+
+
+
+
 /* =========================================
    АДАПТИВНОСТЬ (МОБИЛЬНАЯ ВЕРСТКА)
    ========================================= */
@@ -1155,5 +1332,38 @@ ul {
     .profile-info__label {
         width: 100%;
         margin-bottom: 5px;
+    }
+
+/* Показываем кнопку "Фильтры" */
+    .catalog-page__filter-btn {
+        display: block;
+    }
+
+    /* Отключаем flex, чтобы панель не занимала место */
+    .catalog-page__layout {
+        display: block;
+    }
+
+    /* Делаем панель выезжающей (шторкой) */
+    .catalog-page__sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Прячем за левый край экрана */
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        border-radius: 0;
+    }
+
+    /* Класс, который выдвигает панель (добавляется через JS) */
+    .catalog-page__sidebar.active {
+        left: 0;
+    }
+
+    /* Показываем крестик на мобилке */
+    .catalog-page__close-filter {
+        display: block;
     }
 }
