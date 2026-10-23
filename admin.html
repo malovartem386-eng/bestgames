@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель — BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo logo">
+                <img src="img/logo.png" alt="Логотип BestGames" class="logo__img">
+                <span class="logo__text">BestGames</span>
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог игр</a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="login.html" class="header__btn-login">Выйти</a>
+                <button class="theme-toggle" type="button" aria-label="Переключить тему">
+                    Сменить тему
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main admin-page">
+        <h1 class="admin-page__title">Административная панель</h1>
+        
+        <div class="admin-container">
+            <h2 class="admin-container__subtitle">Добавить новую игру</h2>
+            
+            <form class="admin-form" id="adminForm">
+                
+                <div class="admin-form__grid">
+                    <!-- Левая колонка -->
+                    <div class="admin-form__col">
+                        <div class="auth-form__group">
+                            <label for="game-title" class="auth-form__label">Название игры</label>
+                            <input type="text" id="game-title" class="auth-form__input" placeholder="Например: Cyberpunk 2077" required>
+                        </div>
+
+                        <div class="auth-form__group">
+                            <label for="game-genre" class="auth-form__label">Жанр</label>
+                            <input type="text" id="game-genre" class="auth-form__input" placeholder="Например: RPG" required>
+                        </div>
+
+                        <div class="auth-form__group">
+                            <label for="game-dev" class="auth-form__label">Разработчик</label>
+                            <input type="text" id="game-dev" class="auth-form__input" placeholder="Например: CD Projekt Red" required>
+                        </div>
+
+                        <div class="auth-form__group">
+                            <label for="game-price" class="auth-form__label">Стоимость (₽)</label>
+                            <input type="number" id="game-price" class="auth-form__input" placeholder="1999" required>
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка -->
+                    <div class="admin-form__col">
+                        <div class="auth-form__group">
+                            <label for="game-image" class="auth-form__label">Обложка игры (изображение)</label>
+                            <!-- input type="file" для загрузки картинки -->
+                            <input type="file" id="game-image" class="auth-form__input auth-form__input--file" accept="image/*" required>
+                        </div>
+
+                        <div class="auth-form__group">
+                            <label for="game-desc" class="auth-form__label">Описание</label>
+                            <textarea id="game-desc" class="auth-form__input auth-form__textarea" rows="6" placeholder="Краткое описание игры..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопка добавления -->
+                <button type="submit" class="auth-form__btn admin-form__submit">Добавить игру</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
