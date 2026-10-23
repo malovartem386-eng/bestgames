@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- название страницы -->
+    <title>BestGames — Маркетплейс игр</title>
+    <!-- загружаем файл со стилями -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Логотип -->
+            <a href="#" class="header__logo logo">
+                <img src="img/logo.png" alt="Логотип BestGames" class="logo__image">
+                <span class="logo__text">BestGames</span>
+            </a>
+
+            <!-- Навигация -->
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#search" class="nav__link">Поиск</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог игр</a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+
+            <!-- Блок с кнопками справа -->
+            <div class="header__actions">
+                <a href="login.html" class="header__btn-login">Войти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main class="main">
+        
+        <!-- Секция: Слайдер с новинками -->
+        
+        <section class="hero">
+            <h1 class="hero__title">Новинки и популярные игры</h1>
+            
+            <div class="slider">
+                <!-- Кнопка "Назад" -->
+                <button class="slider__btn slider__btn--prev" id="prevBtn" aria-label="Предыдущий слайд">&#10094;</button>
+                
+                <!-- Окно слайдера -->
+                <div class="slider__window">
+                    <!-- Лента со слайдами -->
+                                        <!-- Лента со слайдами -->
+                    <div class="slider__track" id="sliderTrack">
+                        <!-- Слайд 1 -->
+                        <div class="slider__slide">
+                            <div class="slider-card">
+                                <div class="slider-card__img-wrapper">
+                                    <img src="img/1.webp" alt="Игра 1" class="slider-card__img">
+                                </div>
+                                <div class="slider-card__content">
+                                    <h2 class="slider-card__title">Minecraft</h2>
+                                    <a href="#" class="slider-card__btn">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 2 -->
+                        <div class="slider__slide">
+                            <div class="slider-card">
+                                <div class="slider-card__img-wrapper">
+                                    <img src="img/2.webp" alt="Игра 2" class="slider-card__img">
+                                </div>
+                                <div class="slider-card__content">
+                                    <h2 class="slider-card__title">DOOM 2016</h2>
+                                    <a href="#" class="slider-card__btn">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Слайд 3 -->
+                        <div class="slider__slide">
+                            <div class="slider-card">
+                                <div class="slider-card__img-wrapper">
+                                    <img src="img/3.webp" alt="Игра 3" class="slider-card__img">
+                                </div>
+                                <div class="slider-card__content">
+                                    <h2 class="slider-card__title">DETROIT: Become Human</h2>
+                                    <a href="#" class="slider-card__btn">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Кнопка "Вперед" -->
+                <button class="slider__btn slider__btn--next" id="nextBtn" aria-label="Следующий слайд">&#10095;</button>
+            </div>
+        </section>
+
+
+        <!-- Быстрый поиск по жанрам -->
+        <section class="genres" id="search">
+            <h2 class="genres__title">Найди свой жанр</h2>
+            
+            <!-- Поле для ввода с подсказками -->
+            <div class="genres__search-wrapper">
+                <div class="genres__search-box">
+                    <input type="text" class="genres__input" id="genreInput" placeholder="Начни вводить жанр (например, Экшен)..." autocomplete="off">
+                    <!-- Сюда будут падать подсказки -->
+                    <ul class="genres__suggestions" id="genreSuggestions">
+                        <!-- JS добавит сюда <li> с жанрами -->
+                    </ul>
+                </div>
+                <button class="genres__search-btn">Найти</button>
+            </div>
+
+            <!-- Кнопки жанров (для быстрого клика) -->
+            <div class="genres__list">
+                <a href="catalog.html?genre=action" class="genres__item">Экшен</a>
+                <a href="catalog.html?genre=rpg" class="genres__item">RPG</a>
+                <a href="catalog.html?genre=strategy" class="genres__item">Стратегии</a>
+                <a href="catalog.html?genre=indie" class="genres__item">Инди</a>
+                <a href="catalog.html?genre=horror" class="genres__item">Хорроры</a>
+            </div>
+        </section>
+
+        <!-- Инфографика преимуществ -->
+        <section class="features">
+            <h2 class="features__title">Почему выбирают BestGames?</h2>
+            <div class="features__grid">
+                <div class="features__item">
+                    <img src="img/icon_price.png" alt="Иконка цен" class="features__icon">
+                    <span class="features__text">Привлекательные цены</span>
+                </div>
+                <div class="features__item">
+                    <img src="img/icon_percent.png" alt="Иконка акций" class="features__icon">
+                    <span class="features__text">Ежемесячные акции</span>
+                </div>
+                <div class="features__item">
+                    <img src="img/icon_support.png" alt="Иконка поддержки" class="features__icon">
+                    <span class="features__text">Круглосуточная поддержка</span>
+                </div>
+
+                <div class="features__item">
+                    <img src="img/icon_fast.png" alt="Иконка покупки" class="features__icon">
+                    <span class="features__text">Быстрая покупка</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Каталог популярных игр -->
+        <section class="catalog">
+            <h2 class="catalog__title">Популярные игры</h2>
+            
+            <!-- Сетка карточек -->
+            <div class="catalog__grid">
+                <!-- Карточка игры 1 -->
+                <article class="game-card">
+                    <div class="game-card__img-wrapper">
+                        <!-- Если картинки нет, оставь этот тег, просто в src пока ничего не пиши или поставь заглушку -->
+                        <img src="img/game1.webp" alt="Игра 1" class="game-card__img">
+                    </div>
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Minecraft</h3>
+                        <p class="game-card__genre">Песочница</p>
+                        <div class="game-card__bottom">
+                            <span class="game-card__price">1 999 ₽</span>
+                            <button class="game-card__btn">В корзину</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Карточка игры 2 -->
+                <article class="game-card">
+                    <div class="game-card__img-wrapper">
+                        <img src="img/game2.webp" alt="Игра 2" class="game-card__img">
+                    </div>
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Cyberpunk 2077</h3>
+                        <p class="game-card__genre">RPG</p>
+                        <div class="game-card__bottom">
+                            <span class="game-card__price">2 499 ₽</span>
+                            <button class="game-card__btn">В корзину</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Карточка игры 3 -->
+                <article class="game-card">
+                    <div class="game-card__img-wrapper">
+                        <img src="img/game3.webp" alt="Игра 3" class="game-card__img">
+                    </div>
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">The Witcher 3</h3>
+                        <p class="game-card__genre">Экшен</p>
+                        <div class="game-card__bottom">
+                            <span class="game-card__price">1 199 ₽</span>
+                            <button class="game-card__btn">В корзину</button>
+                        </div>
+                    </div>
+                </article>
+
+                                <!-- Карточка игры 4 -->
+                <article class="game-card">
+                    <div class="game-card__img-wrapper">
+                        <img src="img/game4.webp" alt="Игра 4" class="game-card__img">
+                    </div>
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">GTA V</h3>
+                        <p class="game-card__genre">Экшен</p>
+                        <div class="game-card__bottom">
+                            <span class="game-card__price">1 499 ₽</span>
+                            <button class="game-card__btn">В корзину</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Карточка игры 5 -->
+                <article class="game-card">
+                    <div class="game-card__img-wrapper">
+                        <img src="img/game5.webp" alt="Игра 5" class="game-card__img">
+                    </div>
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Elden Ring</h3>
+                        <p class="game-card__genre">RPG</p>
+                        <div class="game-card__bottom">
+                            <span class="game-card__price">3 999 ₽</span>
+                            <button class="game-card__btn">В корзину</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Секция: Партнеры -->
+        <section class="partners">
+            <h2 class="partners__title">Наши партнеры</h2>
+            <div class="partners__grid">
+                <img src="img/partner1.png" alt="Партнер 1" class="partners__logo">
+                <img src="img/partner2.png" alt="Партнер 2" class="partners__logo">
+                <img src="img/partner3.png" alt="Партнер 3" class="partners__logo">
+                <img src="img/partner4.png" alt="Партнер 4" class="partners__logo">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал (Footer) -->
+    <footer class="footer">
+        <div class="footer__container">
+            
+            <!-- Колонка 1: О нас -->
+            <div class="footer__col">
+                <h3 class="footer__title">BestGames</h3>
+                <p class="footer__text">Лучший маркетплейс игр для настоящих геймеров и киберспортсменов.</p>
+                <div class="footer__contacts">
+                    <p class="footer__contact-item">📞 8-800-999-55-99</p>
+                    <p class="footer__contact-item">✉️ best@games.ru</p>
+                </div>
+            </div>
+
+            <!-- Колонка 2: Навигация по сайту -->
+            <div class="footer__col">
+                <h3 class="footer__title">Навигация</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html" class="footer__link">Главная</a></li>
+                    <li><a href="register.html" class="footer__link">Регистрация</a></li>
+                    <li><a href="login.html" class="footer__link">Авторизация</a></li>
+                    <li><a href="#" class="footer__link">Личный кабинет</a></li>
+                    <li><a href="index.html#search" class="footer__link">Поиск</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 3: Клиентам и Контакты -->
+            <div class="footer__col">
+                <h3 class="footer__title">Клиентам</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Помощь</a></li>
+                    <li><a href="#" class="footer__link">Контакты</a></li>
+                    <li><a href="#" class="footer__link">О нас</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 4: Партнерам -->
+            <div class="footer__col">
+                <h3 class="footer__title">Партнерам</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Сотрудничество</a></li>
+                    <li><a href="#" class="footer__link">Размещение игр</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <!-- Нижняя полоса с копирайтом -->
+        <div class="footer__bottom">
+            <p>&copy; 2026 BestGames. Все права защищены.</p>
+        </div>
+    </footer>
+        <!-- Подключаем скрипт темы -->
+    <script src="js/main.js"></script>
+    
+    <!-- Скрипт слайдера прямо в HTML -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sliderTrack = document.getElementById('sliderTrack');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            if (sliderTrack && prevBtn && nextBtn) {
+                let currentSlide = 0;
+                const totalSlides = document.querySelectorAll('.slider__slide').length;
+
+                function updateSlider() {
+                    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
+
+                nextBtn.addEventListener('click', () => {
+                    currentSlide++;
+                    if (currentSlide >= totalSlides) currentSlide = 0;
+                    updateSlider();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    currentSlide--;
+                    if (currentSlide < 0) currentSlide = totalSlides - 1;
+                    updateSlider();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
