@@ -90,10 +90,10 @@ ul {
 .logo__img {
     width: 30px;
     height: 30px;
-    min-width: 35px; /* Запрещаем сжиматься меньше */
-    max-width: 35px; /* Запрещаем расти больше */
-    object-fit: cover; /* Обрезаем лишнее, чтобы влезло в квадрат */
-    border-radius: 5px; /* (Опционально) Чуть скруглим углы, если сумка квадратная */
+    min-width: 35px;
+    max-width: 35px;
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 .logo__text {
@@ -136,7 +136,7 @@ ul {
 .header__actions {
     display: flex;
     align-items: center;
-    gap: 15px; /* Расстояние между кнопкой "Войти" и "Сменить тему" */
+    gap: 15px; 
 }
 
 /* Кнопка "Войти" */
@@ -169,7 +169,7 @@ ul {
     margin-bottom: 20px;
 }
 
-/* Сетка каталога (Grid) */
+/* Сетка каталога */
 .catalog__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -275,7 +275,7 @@ ul {
 
 
 /* =========================================
-   СЛАЙДЕР (HERO) - КАРТОЧКИ
+   СЛАЙДЕР  - КАРТОЧКИ
    ========================================= */
 .hero {
     margin-bottom: 40px;
@@ -291,7 +291,7 @@ ul {
 .slider__window {
     overflow: hidden;
     width: 100%;
-    padding: 10px 0; /* Отступы для теней карточек */
+    padding: 10px 0; 
 }
 
 .slider__track {
@@ -302,7 +302,7 @@ ul {
 /* Каждый слайд занимает 100% ширины окна */
 .slider__slide {
     min-width: 100%;
-    padding: 0 10px; /* Немного отступают друг от друга */
+    padding: 0 10px; 
     box-sizing: border-box;
 }
 
@@ -318,7 +318,7 @@ ul {
 
 .slider-card__img-wrapper {
     width: 100%;
-    height: 350px; /* Высота картинки */
+    height: 350px;
 }
 
 .slider-card__img {
@@ -330,7 +330,7 @@ ul {
 .slider-card__content {
     padding: 20px;
     display: flex;
-    justify-content: space-between; /* Текст слева, кнопка справа */
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -371,7 +371,7 @@ ul {
     align-items: center;
     transition: all var(--transition-speed);
     z-index: 10;
-    flex-shrink: 0; /* Чтобы кнопки не сжимались */
+    flex-shrink: 0;
 }
 
 .slider__btn:hover {
@@ -392,17 +392,17 @@ ul {
 /* Выпадающий список подсказок */
 .genres__suggestions {
     position: absolute;
-    top: 100%; /* Прямо под полем ввода */
+    top: 100%; 
     left: 0;
     width: 100%;
     background-color: var(--bg-secondary);
     border: 1px solid var(--accent-color);
-    border-radius: 0 0 15px 15px; /* Скругляем только нижние углы */
+    border-radius: 0 0 15px 15px; 
     list-style: none;
     padding: 0;
     margin: 0;
-    z-index: 10; /* Чтобы список был поверх других элементов */
-    display: none; /* По умолчанию скрыт */
+    z-index: 10; 
+    display: none; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
@@ -427,7 +427,7 @@ ul {
     display: flex;
     justify-content: center;
     max-width: 600px;
-    margin: 0 auto 30px auto; /* Центрируем и делаем отступ снизу до кнопок */
+    margin: 0 auto 30px auto; 
     gap: 10px;
 }
 
@@ -435,7 +435,7 @@ ul {
     width: 100%;
     padding: 12px 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px; /* Круглое поле */
+    border-radius: 30px; 
     background-color: var(--bg-secondary);
     color: var(--text-main);
     font-size: 1rem;
@@ -444,7 +444,7 @@ ul {
 }
 
 .genres__input:focus {
-    border-color: var(--accent-color); /* Фиолетовая рамка при клике */
+    border-color: var(--accent-color); 
     box-shadow: 0 0 10px rgba(123, 44, 191, 0.3);
 }
 
@@ -466,7 +466,7 @@ ul {
 
 .genres {
     margin-bottom: 40px;
-    text-align: center; /* Выравниваем заголовок по центру */
+    text-align: center; 
 }
 
 .genres__title {
@@ -477,7 +477,7 @@ ul {
 .genres__list {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Чтобы кнопки переносились на новую строку, если не влезают */
+    flex-wrap: wrap; 
     gap: 15px;
 }
 
@@ -485,7 +485,7 @@ ul {
     background-color: var(--bg-secondary);
     color: var(--text-main);
     padding: 10px 24px;
-    border-radius: 30px; /* Делаем кнопки-таблетки */
+    border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: 500;
     transition: all var(--transition-speed) ease;
@@ -495,8 +495,8 @@ ul {
     background-color: var(--accent-color);
     color: #ffffff;
     border-color: var(--accent-hover);
-    transform: translateY(-3px); /* Легкий прыжок при наведении */
-    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.4); /* Фиолетовое свечение */
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 12px rgba(123, 44, 191, 0.4); 
 }
 
 /* =========================================
@@ -517,7 +517,7 @@ ul {
 
 .features__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 колонки на десктопе */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 30px;
 }
 
@@ -538,7 +538,7 @@ ul {
 .features__number {
     font-size: 2.5rem;
     font-weight: 900;
-    color: var(--accent-color); /* Фиолетовые цифры */
+    color: var(--accent-color); 
     line-height: 1;
 }
 
@@ -551,10 +551,10 @@ ul {
    ПАРТНЕРЫ
    ========================================= */
 .partners__logo {
-    width: 120px;       /* Фиксированная ширина для всех */
-    height: 60px;       /* Фиксированная высота для всех */
-    object-fit: contain; /* Картинка впишется в эти рамки, не искажаясь */
-    opacity: 0.7;       /* Чуть приглушим */
+    width: 120px;      
+    height: 60px;       
+    object-fit: contain; 
+    opacity: 0.7;     
     transition: all var(--transition-speed) ease;
 }
 
@@ -580,7 +580,7 @@ ul {
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr; /* ВОТ ТУТ ДОЛЖНО БЫТЬ 4 ЗНАЧЕНИЯ */
+    grid-template-columns: 2fr 1fr 1fr 1fr; 
     gap: 30px;
     margin-bottom: 40px;
 }
@@ -617,7 +617,7 @@ ul {
 }
 
 .footer__bottom {
-    background-color: rgba(0, 0, 0, 0.2); /* Чуть темнее фон для нижней полосы */
+    background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 15px 0;
     color: var(--text-muted);
@@ -634,7 +634,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 150px); /* Высота экрана минус шапка */
+    min-height: calc(100vh - 150px);
     padding: 40px 20px;
 }
 
@@ -643,7 +643,7 @@ ul {
     padding: 40px;
     border-radius: var(--border-radius);
     width: 100%;
-    max-width: 400px; /* Форма не будет шире 400px */
+    max-width: 400px; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -669,7 +669,7 @@ ul {
 .auth-form__input {
     width: 100%;
     padding: 12px 15px;
-    background-color: var(--bg-main); /* Темный фон поля */
+    background-color: var(--bg-main); 
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius);
     color: var(--text-main);
@@ -679,7 +679,7 @@ ul {
 
 .auth-form__input:focus {
     outline: none;
-    border-color: var(--accent-color); /* Фиолетовая рамка при клике */
+    border-color: var(--accent-color); 
     box-shadow: 0 0 10px rgba(123, 44, 191, 0.2);
 }
 
@@ -726,16 +726,16 @@ ul {
 
 .auth-form__checkbox-label {
     display: flex;
-    align-items: flex-start; /* Выравниваем по верхнему краю, если текст в две строки */
+    align-items: flex-start; 
     gap: 10px;
     cursor: pointer;
 }
 
 .auth-form__checkbox {
-    margin-top: 3px; /* Чуть опускаем галочку для ровности */
+    margin-top: 3px; 
     width: 18px;
     height: 18px;
-    accent-color: var(--accent-color); /* Делает галочку фиолетовой в современных браузерах */
+    accent-color: var(--accent-color); 
     cursor: pointer;
 }
 
@@ -756,19 +756,19 @@ ul {
    ========================================= */
 .profile-page {
     display: flex;
-    justify-content: center; /* Центрируем содержимое */
+    justify-content: center; 
     width: 100%;
-    padding: 30px 20px; /* Добавим отступы по бокам, чтобы на мобилке не прилипало */
-    box-sizing: border-box; /* Чтобы паддинги не увеличивали ширину */
+    padding: 30px 20px; 
+    box-sizing: border-box; 
 }
 
 .profile-layout {
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    max-width: 1200px;      /* Ограничиваем максимальную ширину */
-    margin: 0 auto;         /* Ставим по центру экрана */
-    width: 100%;            /* Занимаем всю доступную ширину до 1200px */
+    max-width: 1200px;      
+    margin: 0 auto;        
+    width: 100%;            
 }
 
 /* Боковое меню */
@@ -896,11 +896,11 @@ ul {
 
 /* Табы */
 .profile-tab {
-    display: none; /* Скрываем все табы по умолчанию */
+    display: none; 
 }
 
 .profile-tab.active {
-    display: block; /* Показываем только активный */
+    display: block; 
 }
 
 /* Кнопки в боковом меню (мы поменяли ссылки <a> на кнопки <button>) */
@@ -934,7 +934,7 @@ ul {
 
 .profile-history-table__header {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Дата - Название - Цена */
+    grid-template-columns: 1fr 2fr 1fr; 
     background-color: rgba(0, 0, 0, 0.2);
     padding: 15px;
     font-weight: bold;
@@ -992,7 +992,7 @@ ul {
 }
 
 
-/* Новые элементы карточки (Разработчик, Рейтинг) */
+
 .game-card__dev {
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -1006,13 +1006,13 @@ ul {
 }
 
 .game-card__rating {
-    color: #ffb703; /* Золотой цвет для звезд */
+    color: #ffb703;
     font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
-/* Кнопка "Подробнее" (делаем её как ссылку, но стилизуем как кнопку) */
+/* Кнопка "Подробнее" */
 .game-card__btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
@@ -1038,7 +1038,7 @@ ul {
     font-size: 2rem;
 }
 
-/* Кнопка "Фильтры" (по умолчанию скрыта на десктопе) */
+/* Кнопка "Фильтры" */
 .catalog-page__filter-btn {
     display: none;
     width: 100%;
@@ -1082,7 +1082,7 @@ ul {
     font-size: 1.2rem;
 }
 
-/* Кнопка закрытия (крестик) — нужна только на мобилке */
+/* Кнопка закрытия */
 .catalog-page__close-filter {
     display: none;
     background: none;
@@ -1123,7 +1123,7 @@ ul {
     flex-grow: 1;
 }
 
-/* Новые элементы карточки (Разработчик, Рейтинг) */
+
 .game-card__dev {
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -1137,7 +1137,7 @@ ul {
 }
 
 .game-card__rating {
-    color: #ffb703; /* Золотой цвет для звезд */
+    color: #ffb703; 
     font-size: 1.1rem;
     letter-spacing: 2px;
     margin-bottom: 15px;
@@ -1164,7 +1164,7 @@ ul {
    АДМИН-ПАНЕЛЬ (ADMIN)
    ========================================= */
 .admin-page {
-    max-width: 1000px; /* Админка не должна быть слишком широкой */
+    max-width: 1000px; 
 }
 
 .admin-page__title {
@@ -1196,7 +1196,7 @@ ul {
 
 /* Стили для textarea (описание) */
 .auth-form__textarea {
-    resize: vertical; /* Пользователь может тянуть вниз, но не в бока */
+    resize: vertical; 
     min-height: 120px;
     font-family: inherit;
 }
@@ -1238,32 +1238,32 @@ ul {
 @media (max-width: 768px) {
 
     .genres__search-wrapper {
-        flex-direction: column; /* На телефоне поле и кнопка встанут друг под друга */
+        flex-direction: column; 
         padding: 0 15px;
     }
     .genres__search-btn {
         padding: 12px;
         width: 100%;
     }
-        /* Логотип на мобилке */
+    /* Логотип на мобилке */
     .header__logo {
-        justify-content: center; /* Центрируем картинку и текст */
-        width: 100%; /* Растягиваем на всю ширину, чтобы центрирование сработало */
-        margin-bottom: 15px; /* Отступ снизу до меню */
+        justify-content: center; 
+        width: 100%; 
+        margin-bottom: 15px; 
     }
 
     /* Текст логотипа на мобилке (опционально, чтобы не был слишком огромным) */
     .logo__text {
-        font-size: 1.3rem; /* Чуть уменьшаем размер шрифта на телефонах */
+        font-size: 1.3rem; 
     }
-        /* Жанры на мобилке */
+    /* Жанры на мобилке */
     .genres__list {
         gap: 10px;
     }
     .genres__item {
         padding: 8px 16px;
         font-size: 0.9rem;
-        width: 45%; /* Кнопки будут по две в ряд */
+        width: 45%; 
         text-align: center;
     }
 
@@ -1272,7 +1272,7 @@ ul {
         padding: 20px 15px;
     }
     .features__grid {
-        grid-template-columns: 1fr; /* На телефоне цифры встанут друг под другом */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
     .features__number {
@@ -1283,13 +1283,13 @@ ul {
         padding: 20px 15px;
     }
 
-        /* Слайдер на мобилке */
+    /* Слайдер на мобилке */
     .slider-card__img-wrapper {
-        height: 200px; /* Картинка ниже */
+        height: 200px;
     }
     
     .slider-card__content {
-        flex-direction: column; /* Кнопка уходит под текст */
+        flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
@@ -1299,7 +1299,7 @@ ul {
     }
     
     .slider-card__btn {
-        width: 100%; /* Кнопка на всю ширину */
+        width: 100%; 
         text-align: center;
     }
 
@@ -1345,12 +1345,12 @@ ul {
     
     /* Карточки */
     .game-card__img-placeholder {
-        height: 200px; /* Увеличиваем картинку */
+        height: 200px; 
     }
 
         /* Футер на мобилке */
     .footer__container {
-        grid-template-columns: 1fr; /* Все колонки встают друг под друга */
+        grid-template-columns: 1fr; 
         gap: 20px;
         text-align: center;
     }
@@ -1362,7 +1362,7 @@ ul {
     }
     
     .profile-page {
-        display: block; /* Отключаем flex на мобилке, чтобы не мешал */
+        display: block;
         padding: 15px;
     }    
 
@@ -1383,7 +1383,7 @@ ul {
         margin-bottom: 5px;
     }
 
-/* Показываем кнопку "Фильтры" */
+    /* Показываем кнопку "Фильтры" */
     .catalog-page__filter-btn {
         display: block;
     }
@@ -1397,7 +1397,7 @@ ul {
     .catalog-page__sidebar {
         position: fixed;
         top: 0;
-        left: -100%; /* Прячем за левый край экрана */
+        left: -100%; 
         width: 280px;
         height: 100vh;
         z-index: 1000;
@@ -1419,10 +1419,10 @@ ul {
         padding: 20px;
     }
     .admin-form__grid {
-        grid-template-columns: 1fr; /* В одну колонку */
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
     .admin-form__submit {
-        max-width: 100%; /* Кнопка на всю ширину */
+        max-width: 100%; 
     }
 }
