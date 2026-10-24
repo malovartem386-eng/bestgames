@@ -22,7 +22,7 @@ themeToggleBtns.forEach(btn => {
 
 
 // =========================================
-// 2. СЛАЙДЕР (ЗАПУСКАЕТСЯ ТОЛЬКО ПОСЛЕ ЗАГРУЗКИ HTML)
+// 2. СЛАЙДЕР
 // =========================================
 document.addEventListener("DOMContentLoaded", () => {
     const sliderTrack = document.getElementById('sliderTrack');
@@ -61,11 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const genreInput = document.getElementById('genreInput');
 const genreSuggestions = document.getElementById('genreSuggestions');
 
-// Наш список жанров (в будущем его можно брать из базы данных)
+
 const genresList = ['Экшен', 'RPG', 'Стратегии', 'Инди', 'Хорроры', 'Симуляторы', 'Спортивные'];
 
 if (genreInput && genreSuggestions) {
-    // Слушаем ввод пользователя
     genreInput.addEventListener('input', () => {
         const value = genreInput.value.toLowerCase(); // Приводим к нижнему регистру для удобства
         
@@ -96,8 +95,7 @@ if (genreInput && genreSuggestions) {
                 li.addEventListener('click', () => {
                     genreInput.value = match;
                     genreSuggestions.classList.remove('active');
-                    // В будущем тут можно сделать переход в каталог с фильтром
-                    // window.location.href = `catalog.html?genre=${match}`;
+
                 });
                 
                 genreSuggestions.appendChild(li);
@@ -146,9 +144,8 @@ if (tabButtons.length > 0 && tabs.length > 0) {
 const loginForm = document.getElementById('loginForm');
 if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Отменяем перезагрузку страницы
-        // В реальности тут была бы проверка логина/пароля через API
-        window.location.href = 'profile.html'; // Перекидываем в ЛК
+        e.preventDefault();
+        window.location.href = 'profile.html'; 
     });
 }
 
@@ -156,9 +153,8 @@ if (loginForm) {
 const registerForm = document.getElementById('registerForm');
 if (registerForm) {
     registerForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Отменяем перезагрузку
-        // В реальности тут была бы отправка данных на сервер
-        // После регистрации отправляем на страницу входа
+        e.preventDefault(); 
+    
         
         window.location.href = 'login.html';
     });
